@@ -2,6 +2,8 @@
 
 Se trata de un portafolio digital dinámico creado para destacar mi experiencia y habilidades profesionales. Integra un panel de control que permite administrar, editar y actualizar todo el contenido público de forma ágil y centralizada.
 
+Enlace del proyecto en produccion: https://teclab.uct.cl/~sayenao2025/index.php
+
 ## Tecnologías Utilizadas
 * **Frontend:** HTML5, CSS3, JavaScript, Bootstrap 5
 * **Backend:** PHP
