@@ -1,9 +1,6 @@
 -- Crear la base de datos (Si estás en XAMPP)
 USE portafolio_db;
 
--- ==========================================
--- 1. TABLA: USUARIOS ADMINISTRADORES
--- ==========================================
 CREATE TABLE usuarios_admin (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -12,9 +9,6 @@ CREATE TABLE usuarios_admin (
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ==========================================
--- 2. TABLA: BIOGRAFÍA
--- ==========================================
 CREATE TABLE biografia (
     id INT AUTO_INCREMENT PRIMARY KEY,
     saludo VARCHAR(50),
@@ -27,9 +21,6 @@ CREATE TABLE biografia (
     email_contacto VARCHAR(100)
 );
 
--- ==========================================
--- 3. TABLA: HABILIDADES (Herramientas)
--- ==========================================
 CREATE TABLE habilidades (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -37,9 +28,6 @@ CREATE TABLE habilidades (
     color_clase VARCHAR(50) -- Ej: text-danger
 );
 
--- ==========================================
--- 4. TABLA: TECNOLOGÍAS (Barras de progreso)
--- ==========================================
 CREATE TABLE tecnologias (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -47,9 +35,6 @@ CREATE TABLE tecnologias (
     color_clase VARCHAR(50) -- Ej: bg-primary
 );
 
--- ==========================================
--- 5. TABLA: PROYECTOS
--- ==========================================
 CREATE TABLE proyectos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(100) NOT NULL,
@@ -59,9 +44,6 @@ CREATE TABLE proyectos (
     url_github VARCHAR(255)
 );
 
--- ==========================================
--- 6. TABLA: MENSAJES DE CONTACTO
--- ==========================================
 CREATE TABLE mensajes_contacto (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -71,10 +53,6 @@ CREATE TABLE mensajes_contacto (
     fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ==========================================
--- INSERCIONES POR DEFECTO (Datos iniciales)
--- ==========================================
-
 -- Insertar el usuario administrador por defecto
 -- Correo: admin@correo.com | Contraseña: password
 INSERT INTO usuarios_admin (nombre, email, password) 
@@ -82,4 +60,4 @@ VALUES ('Administrador', 'admin@correo.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoE
 
 -- Insertar un registro inicial vacío para la biografía (Obligatorio para que no falle el UPDATE)
 INSERT INTO biografia (id, saludo, nombre_completo, titulo, descripcion, cv_url, github_url, linkedin_url, email_contacto) 
-VALUES (1, 'Hola, Soy', 'Sebastian Ayenao', 'Desarrollador Web', 'Descripción de ejemplo para tu portafolio.', '#', '#', '#', 'admin@correo.com');
+VALUES (1, 'Hola, Soy', 'Sebastian Ayenao', 'Desarrollador Web', '#', '#', '#', '#', 'admin@correo.com');
