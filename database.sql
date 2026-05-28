@@ -1,4 +1,3 @@
--- Crear la base de datos (Si estás en XAMPP)
 USE portafolio_db;
 
 CREATE TABLE usuarios_admin (
